@@ -3,6 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
+    "@fontsource/roboto": "^5.1.0",
+    "@mui/icons-material": "^6.1.5",
+    "@mui/material": "^6.1.5",
     "localforage": "^1.10.0",
     "match-sorter": "^7.0.0",
     "react": "^18.3.1",
@@ -46,8 +51,7 @@
       "last 1 safari version"
     ]
   },
-
   "resolutions": {
-  "eslint-plugin-react": "^7.32.0" 
-}
+    "eslint-plugin-react": "^7.32.0"
+  }
 }
