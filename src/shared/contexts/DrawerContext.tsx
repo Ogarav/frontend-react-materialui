@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react/react-in-jsx-scope */
-import { useContext } from "react";
+import { createContext, useContext, useState, useCallback } from "react";
 
 
 interface IDrawerOption {
@@ -30,7 +30,7 @@ export const DrawerProvider: React.FC<IDrawerProviderProps> = ({ children }) => 
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   
     const toggleDrawerOpen = useCallback(() => {
-      setIsDrawerOpen(oldDrawerOpen => !oldDrawerOpen);
+      setIsDrawerOpen((oldDrawerOpen: boolean) => !oldDrawerOpen);
 }, []);
 
 const handleSetDrawerOptions = useCallback((newDrawerOptions: IDrawerOption[]) => {

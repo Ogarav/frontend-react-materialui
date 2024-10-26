@@ -3,16 +3,16 @@ import { BrowserRouter } from "react-router-dom";
 
 import { AppRoutes } from "./routes";
 import { AppThemeProvider } from "./shared/contexts";
-import { MenuLAteral } from "./shared/components";
+import { MenuLateral } from "./shared/components";
 
 
 export const App = () => {
   return (
   <AppThemeProvider>
     <BrowserRouter>
-      <MenuLAteral>
+      <MenuLateral>
        <AppRoutes />
-      </MenuLAteral>
+      </MenuLateral>
     </BrowserRouter>
       </AppThemeProvider>
   );
