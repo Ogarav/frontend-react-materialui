@@ -31,8 +31,8 @@ export const DrawerProvider: React.FC<IDrawerProviderProps> = ({ children }) => 
       setIsDrawerOpen((oldDrawerOpen: boolean) => !oldDrawerOpen);
 }, []);
 
-const handleSetDrawerOptions = useCallback((newDrawerOptions: IDrawerOption[]) => {
-    setDrawerOptions(newDrawerOptions);
+    const handleSetDrawerOptions = useCallback((newDrawerOptions: IDrawerOption[]) => {
+        setDrawerOptions(newDrawerOptions);
   }, []);
 
   return (

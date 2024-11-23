@@ -1,5 +1,4 @@
-/* eslint-disable react/prop-types */
-/* eslint-disable react/react-in-jsx-scope */
+
 import { ReactNode } from 'react';
 import { Box, Icon, IconButton, Theme, Typography, useMediaQuery, useTheme } from '@mui/material';
 
@@ -29,9 +28,9 @@ export const LayoutBaseDePagina: React.FC<ILayoutBaseDePaginaProps> = ({ childre
         )}
 
         <Typography
-          overflow="hidden"
-          whiteSpace="nowrap"
-          textOverflow="ellipses"
+          overflow="hidden" //faz com que o texto suma quando acabar o espaço
+          whiteSpace="nowrap" //faz com que o texto grande não quebre em linha quando o bloco for menor que ele
+          textOverflow="ellipses" // mostra três pontos no final do texto cortado 
           variant={smDown ? 'h5' : mdDown ? 'h4' : 'h3'}
         >
           {titulo}
@@ -43,10 +42,12 @@ export const LayoutBaseDePagina: React.FC<ILayoutBaseDePaginaProps> = ({ childre
           {barraDeFerramentas}
         </Box>
       )}
-
+      
       <Box flex={1} overflow="auto">
         {children}
       </Box>
     </Box>
+    /* overflow neste campo faz com que apenas esse iten contenha scroll, 
+    e não o conteúdo da página toda */
   );
 };
